@@ -2,18 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
+
 class AdminController extends Controller
 {
     public function routes($page){
         switch ($page) {
             case 'login':
                 return view('/page/admin/login',[
-                    "title" => "PresMUN 2022 || CHAIRS & COUNCILS"
+                    "title" => "PresMUN 2022 || LOGIN"
                 ]);
                 break;
             case 'dashboard':
                 return view('/page/admin/dashboard',[
-                    "title" => "PresMUN 2022 || CHAIRS & COUNCILS"
+                    "title" => "PresMUN 2022 || DASHBOARD"
                 ]);
                 break;
             case 'chaco':
@@ -23,7 +25,8 @@ class AdminController extends Controller
                 break;
             case 'article':
                 return view('/page/admin/article',[
-                    "title" => "PresMUN 2022 || ARTICLE"
+                    "title" => "PresMUN 2022 || ARTICLE",
+                    "articles" => Article::getAll()
                 ]);
                 break;
             case 'secre':

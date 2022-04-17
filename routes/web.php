@@ -17,4 +17,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PublicController::class, 'index']);
 Route::get('/{page}', [PublicController::class, 'routes']);
+Route::get('/article/{id}', [PublicController::class, 'article']);
 Route::get('/admin/{page}', [AdminController::class, 'routes']);

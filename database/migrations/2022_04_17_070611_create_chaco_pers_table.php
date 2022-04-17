@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSecretariatsTable extends Migration
+class CreateChacoPersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateSecretariatsTable extends Migration
      */
     public function up()
     {
-        Schema::create('secretariats', function (Blueprint $table) {
+        Schema::create('chaco_pers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('divisions_id');
-            $table->foreignId('subdivisions_id');
+            $table->foreignId('chacos_id');
+            $table->string('image')->nullable();
             $table->string('name');
             $table->string('role');
             $table->string('achievements');
@@ -32,6 +32,6 @@ class CreateSecretariatsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('secretariats');
+        Schema::dropIfExists('chaco_pers');
     }
 }

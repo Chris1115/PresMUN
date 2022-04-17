@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
+
 class PublicController extends Controller
 {
     public function index(){
@@ -13,7 +15,8 @@ class PublicController extends Controller
         switch ($page) {
             case 'article':
                 return view('/page/public/article',[
-                    "title" => "PresMUN 2022 || ARTICLE"
+                    "title" => "PresMUN 2022 || ARTICLE",
+                    "articles" => Article::getAll()
                 ]);
                 break;
             case 'about':

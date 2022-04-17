@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class SubdivisionSeeder extends Seeder
+class ChacoPersSeeder extends Seeder
 {
     /**
      * Run the database seeds.

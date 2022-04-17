@@ -2,22 +2,25 @@
 
 namespace App\Models;
 
-use App\Models\ChacoPers;
+use App\Models\Chaco;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Chaco extends Model
+class ChacoPers extends Model
 {
     use HasFactory;
 
     protected $guarded = ['id'];
 
-    public static function add($name, $slogan, $description){
-        Chaco::create([
+    public static function add($name, $image, $role, $chacos_id, $achievements, $description){
+        ChacoPers::create([
             "name" => $name,
-            "slogan" => $slogan,
+            "image" => $image,
+            "role" => $role,
+            "chacos_id" => $chacos_id,
+            "achievements" => $achievements,
             "description" => $description
         ]);
     }
@@ -31,10 +34,13 @@ class Chaco extends Model
         return $chaco;
     }
 
-    public static function updateData($id, $name, $slogan, $description){
+    public static function updateData($id, $name, $image, $role, $chacos_id, $achievements, $description){
         DB::table('chacos')->where('id', $id)->update([
             "name" => $name,
-            "slogan" => $slogan,
+            "image" => $image,
+            "role" => $role,
+            "chacos_id" => $chacos_id,
+            "achievements" => $achievements,
             "description" => $description
         ]);
     }
@@ -43,7 +49,7 @@ class Chaco extends Model
         DB::table('chacos')->where('id', $id)->delete();
     }
 
-    public function chaco_pers(){
-        return $this->hasMany(ChacoPers::class);
+    public function chachos(){
+        return $this->belongsTo(Chaco::class);
     }
 }

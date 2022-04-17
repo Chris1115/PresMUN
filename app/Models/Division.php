@@ -2,20 +2,21 @@
 
 namespace App\Models;
 
-use App\Models\ChacoPers;
+use App\Models\Subdivision;
+use App\Models\Secretariat;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Chaco extends Model
+class Division extends Model
 {
     use HasFactory;
 
     protected $guarded = ['id'];
 
     public static function add($name, $slogan, $description){
-        Chaco::create([
+        Division::create([
             "name" => $name,
             "slogan" => $slogan,
             "description" => $description
@@ -43,7 +44,11 @@ class Chaco extends Model
         DB::table('chacos')->where('id', $id)->delete();
     }
 
-    public function chaco_pers(){
-        return $this->hasMany(ChacoPers::class);
+    public function subdivisions(){
+        return $this->hasMany(Subdivision::class);
+    }
+
+    public function secretariats(){
+        return $this->hasMany(Secretariat::class);
     }
 }

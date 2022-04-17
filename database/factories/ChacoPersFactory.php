@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class SecretariatFactory extends Factory
+class ChacoPersFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,8 +14,7 @@ class SecretariatFactory extends Factory
     public function definition()
     {
         return [
-            'divisions_id' => mt_rand(1,8),
-            'subdivisions_id' => mt_rand(1,8),
+            'chacos_id' => mt_rand(1,8),
             'image' => $this->faker->image(),
             'name' => $this->faker->name(),
             'role' => $this->faker->sentence(mt_rand(2,4)),
