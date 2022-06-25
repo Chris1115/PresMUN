@@ -15,33 +15,31 @@ class Division extends Model
 
     protected $guarded = ['id'];
 
-    public static function add($name, $slogan, $description){
+    public static function add($name, $description){
         Division::create([
-            "name" => $name,
-            "slogan" => $slogan,
-            "description" => $description
+            "d_name" => $name,
+            "d_description" => $description
         ]);
     }
     public static function getAll(){
-        $chacos = DB::table('chacos')->get();
-        return $chacos;
+        $divisions = DB::table('divisions')->get();
+        return $divisions;
     }
 
     public static function getById($id){
-        $chaco = DB::table('chacos')->where('id', $id)->first();
+        $chaco = DB::table('divisions')->where('id', $id)->first();
         return $chaco;
     }
 
-    public static function updateData($id, $name, $slogan, $description){
-        DB::table('chacos')->where('id', $id)->update([
-            "name" => $name,
-            "slogan" => $slogan,
-            "description" => $description
+    public static function updateData($id, $name, $description){
+        DB::table('divisions')->where('id', $id)->update([
+            "d_name" => $name,
+            "d_description" => $description
         ]);
     }
 
     public static function deleteById($id){
-        DB::table('chacos')->where('id', $id)->delete();
+        DB::table('divisions')->where('id', $id)->delete();
     }
 
     public function subdivisions(){

@@ -1,0 +1,29 @@
+.profile-card img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-card:hover{
+    transform: scale(1.01);
+}
+
+.profile-desc{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity .25s;
+}
+
+.profile-desc > *{
+    transform: translateY(20px);
+    transition: transform .25s;
+}
+
+.profile-desc:hover{
+    opacity: 1;
+}

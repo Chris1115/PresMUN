@@ -14,39 +14,50 @@ class ChacoPers extends Model
 
     protected $guarded = ['id'];
 
-    public static function add($name, $image, $role, $chacos_id, $achievements, $description){
+    public static function add($name, $image, $role, $institution, $chacos_id, $achievements, $description){
         ChacoPers::create([
-            "name" => $name,
-            "image" => $image,
-            "role" => $role,
+            "cp_name" => $name,
+            "cp_image" => $image,
+            "cp_role" => $role,
+            "cp_institution" => $institution,
             "chacos_id" => $chacos_id,
-            "achievements" => $achievements,
-            "description" => $description
+            "cp_achievements" => $achievements,
+            "cp_description" => $description
         ]);
     }
     public static function getAll(){
-        $chacos = DB::table('chacos')->get();
-        return $chacos;
+        $secre = DB::table('chaco_pers')
+            ->join('chacos', 'chaco_pers.chacos_id', '=', 'chacos.id')
+            ->select('chaco_pers.*', 'chacos.c_name', 'chacos.c_name')
+            ->get();
+    
+        return $secre;
     }
 
     public static function getById($id){
-        $chaco = DB::table('chacos')->where('id', $id)->first();
+        $chaco = DB::table('chaco_pers')->where('id', $id)->first();
         return $chaco;
     }
 
-    public static function updateData($id, $name, $image, $role, $chacos_id, $achievements, $description){
-        DB::table('chacos')->where('id', $id)->update([
-            "name" => $name,
-            "image" => $image,
-            "role" => $role,
+    public static function getByChacoId($id){
+        $chaco = DB::table('chaco_pers')->where('chacos_id', $id)->get();
+        return $chaco;
+    }
+
+    public static function updateData($id, $name, $image, $role, $institution, $chacos_id, $achievements, $description){
+        DB::table('chaco_pers')->where('id', $id)->update([
+            "cp_name" => $name,
+            "cp_image" => $image,
+            "cp_role" => $role,
+            "cp_institution" => $institution,
             "chacos_id" => $chacos_id,
-            "achievements" => $achievements,
-            "description" => $description
+            "cp_achievements" => $achievements,
+            "cp_description" => $description
         ]);
     }
 
     public static function deleteById($id){
-        DB::table('chacos')->where('id', $id)->delete();
+        DB::table('chaco_pers')->where('id', $id)->delete();
     }
 
     public function chachos(){

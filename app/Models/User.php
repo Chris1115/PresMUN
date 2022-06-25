@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+
 
 class User extends Authenticatable
 {
@@ -18,9 +20,8 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'u_username',
+        'u_password'
     ];
 
     /**
@@ -30,15 +31,37 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
-        'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public static function add($username, $password){
+        User::create([
+            "u_username" => $username,
+            "u_password" => $password
+        ]);
+    }
+    public static function getAll(){
+        $users = DB::table('users')->get();
+        return $users;
+    }
+
+    public static function getFirst(){
+        $users = DB::table('users')->first();
+        return $users;
+    }
+
+    public static function getById($id){
+        $user = DB::table('users')->where('id', $id)->first();
+        return $user;
+    }
+
+    public static function updateData($id, $username, $password){
+        DB::table('users')->where('id', $id)->update([
+            "u_username" => $username,
+            "u_password" => $password
+        ]);
+    }
+
+    public static function deleteById($id){
+        DB::table('users')->where('id', $id)->delete();
+    }
 }

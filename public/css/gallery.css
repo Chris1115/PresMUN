@@ -1,0 +1,33 @@
+.photo-card img{
+    border-radius: 5%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.photo-card:hover{
+    transform: scale(1.01);
+    /* filter: brightness(2); */
+}
+
+.photo-desc{
+    width: 95%;
+    height: 92%;
+    display: flex;
+    border-radius: 5%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity .25s;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.photo-desc > *{
+    transform: translateY(20px);
+    transition: transform .25s;
+}
+
+.photo-desc:hover{
+    opacity: 1;
+}

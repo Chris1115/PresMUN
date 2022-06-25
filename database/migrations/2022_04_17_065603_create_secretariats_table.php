@@ -17,11 +17,10 @@ class CreateSecretariatsTable extends Migration
             $table->id();
             $table->foreignId('divisions_id');
             $table->foreignId('subdivisions_id');
-            $table->string('image')->nullable();
-            $table->string('name');
-            $table->string('role');
-            $table->string('achievements');
-            $table->string('description');
+            $table->string('s_image')->nullable();
+            $table->string('s_name');
+            $table->string('s_achievements');
+            $table->longText('s_description', 20000);
             $table->timestamps();
         });
     }

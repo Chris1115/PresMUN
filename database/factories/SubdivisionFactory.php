@@ -15,9 +15,8 @@ class SubdivisionFactory extends Factory
     {
         return [
             'divisions_id' => mt_rand(1,8),
-            'name' => $this->faker->sentence(mt_rand(2,4)),
-            'slogan' => $this->faker->sentence(mt_rand(5,10)),
-            'description' => $this->faker->paragraph(mt_rand(1,2))
+            'sd_name' => $this->faker->sentence(mt_rand(2,4)),
+            'sd_description' => $this->faker->paragraph(mt_rand(1,2))
         ];
     }
 }

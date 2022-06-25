@@ -15,11 +15,9 @@ class ChacoPersFactory extends Factory
     {
         return [
             'chacos_id' => mt_rand(1,8),
-            'image' => $this->faker->image(),
-            'name' => $this->faker->name(),
-            'role' => $this->faker->sentence(mt_rand(2,4)),
-            'achievements' => $this->faker->sentence(mt_rand(10,30)),
-            'description' => $this->faker->paragraph(mt_rand(1,3))
+            'cp_name' => $this->faker->name(),
+            'cp_achievements' => $this->faker->sentence(mt_rand(10,30)),
+            'cp_description' => $this->faker->paragraph(mt_rand(1,2))
         ];
     }
 }

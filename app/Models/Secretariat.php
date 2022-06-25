@@ -15,20 +15,30 @@ class Secretariat extends Model
 
     protected $guarded = ['id'];
 
-    public static function add($division_id, $subdivision_id, $image, $name, $role, $achievements, $description){
+    public static function add($division_id, $subdivision_id, $image, $name, $achievements, $description){
         Secretariat::create([
-            "division_id" => $division_id,
-            "subdivision_id" => $subdivision_id,
-            "image" => $image,
-            "name" => $name,
-            "role" => $role,
-            "achievements" => $achievements,
-            "description" => $description
+            "divisions_id" => $division_id,
+            "subdivisions_id" => $subdivision_id,
+            "s_image" => $image,
+            "s_name" => $name,
+            "s_achievements" => $achievements,
+            "s_description" => $description
         ]);
     }
+    // public static function getAll(){
+    //     $secretariats = DB::table('secretariats')->get();
+    //     return $secretariats;
+    // }
+
     public static function getAll(){
-        $secretariats = DB::table('secretariats')->get();
-        return $secretariats;
+        $secre = DB::table('secretariats')
+            ->join('divisions', 'secretariats.divisions_id', '=', 'divisions.id')
+            ->join('subdivisions', 'secretariats.subdivisions_id', '=', 'subdivisions.id')
+            ->select('secretariats.*', 'divisions.d_name', 'subdivisions.sd_name')
+            ->orderBy('subdivisions_id', 'ASC')
+            ->get();
+    
+        return $secre;
     }
 
     public static function getById($id){
@@ -36,15 +46,14 @@ class Secretariat extends Model
         return $secretariat;
     }
 
-    public static function updateData($id, $division_id, $subdivision_id, $image, $name, $role, $achievements, $description){
+    public static function updateData($id, $division_id, $subdivision_id, $image, $name, $achievements, $description){
         DB::table('secretariats')->where('id', $id)->update([
-            "division_id" => $division_id,
-            "subdivision_id" => $subdivision_id,
-            "image" => $image,
-            "name" => $name,
-            "role" => $role,
-            "achievements" => $achievements,
-            "description" => $description
+            "divisions_id" => $division_id,
+            "subdivisions_id" => $subdivision_id,
+            "s_image" => $image,
+            "s_name" => $name,
+            "s_achievements" => $achievements,
+            "s_description" => $description
         ]);
     }
 

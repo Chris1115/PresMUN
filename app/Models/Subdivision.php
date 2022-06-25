@@ -15,17 +15,20 @@ class Subdivision extends Model
 
     protected $guarded = ['id'];
 
-    public static function add($divisions_id, $name, $slogan, $description){
+    public static function add($divisions_id, $name, $description){
         Subdivision::create([
             "divisions_id" => $divisions_id,
-            "name" => $name,
-            "slogan" => $slogan,
-            "description" => $description
+            "sd_name" => $name,
+            "sd_description" => $description
         ]);
     }
     public static function getAll(){
-        $subdivisions = DB::table('subdivisions')->get();
-        return $subdivisions;
+        $subdiv = DB::table('subdivisions')
+            ->join('divisions', 'subdivisions.divisions_id', '=', 'divisions.id')
+            ->select('subdivisions.*', 'divisions.d_name')
+            ->get();
+    
+        return $subdiv;
     }
 
     public static function getById($id){
@@ -33,12 +36,11 @@ class Subdivision extends Model
         return $subdivision;
     }
 
-    public static function updateData($id, $divisions_id, $name, $slogan, $description){
+    public static function updateData($id, $divisions_id, $name, $description){
         DB::table('subdivisions')->where('id', $id)->update([
             "divisions_id" => $divisions_id,
-            "name" => $name,
-            "slogan" => $slogan,
-            "description" => $description
+            "sd_name" => $name,
+            "sd_description" => $description
         ]);
     }
 

@@ -14,9 +14,8 @@ class ChacoFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->sentence(mt_rand(1,3)),
-            'slogan' => $this->faker->sentence(mt_rand(5,10)),
-            'description' => $this->faker->paragraph(mt_rand(1,2))
+            'c_name' => $this->faker->sentence(mt_rand(1,3)),
+            'c_description' => $this->faker->paragraph(mt_rand(1,2))
         ];
     }
 }

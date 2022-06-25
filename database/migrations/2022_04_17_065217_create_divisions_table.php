@@ -15,9 +15,8 @@ class CreateDivisionsTable extends Migration
     {
         Schema::create('divisions', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('slogan');
-            $table->string('description');
+            $table->string('d_name');
+            $table->longText('d_description', 20000);
             $table->timestamps();
         });
     }

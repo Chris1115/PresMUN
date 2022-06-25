@@ -14,9 +14,8 @@ class DivisionFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->sentence(mt_rand(2,4)),
-            'slogan' => $this->faker->sentence(mt_rand(5,10)),
-            'description' => $this->faker->paragraph(mt_rand(1,2))
+            'd_name' => $this->faker->sentence(mt_rand(2,4)),
+            'd_description' => $this->faker->paragraph(mt_rand(1,2))
         ];
     }
 }

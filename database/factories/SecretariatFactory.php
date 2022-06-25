@@ -16,11 +16,9 @@ class SecretariatFactory extends Factory
         return [
             'divisions_id' => mt_rand(1,8),
             'subdivisions_id' => mt_rand(1,8),
-            'image' => $this->faker->image(),
-            'name' => $this->faker->name(),
-            'role' => $this->faker->sentence(mt_rand(2,4)),
-            'achievements' => $this->faker->sentence(mt_rand(10,30)),
-            'description' => $this->faker->paragraph(mt_rand(1,3))
+            's_name' => $this->faker->name(),
+            's_achievements' => $this->faker->sentence(mt_rand(10,20)),
+            's_description' => $this->faker->paragraph(mt_rand(1,3))
         ];
     }
 }

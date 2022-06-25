@@ -16,11 +16,12 @@ class CreateChacoPersTable extends Migration
         Schema::create('chaco_pers', function (Blueprint $table) {
             $table->id();
             $table->foreignId('chacos_id');
-            $table->string('image')->nullable();
-            $table->string('name');
-            $table->string('role');
-            $table->string('achievements');
-            $table->string('description');
+            $table->string('cp_image')->nullable();
+            $table->string('cp_name');
+            $table->string('cp_institution');
+            $table->string('cp_role');
+            $table->string('cp_achievements', 15000);
+            $table->longText('cp_description', 20000);
             $table->timestamps();
         });
     }

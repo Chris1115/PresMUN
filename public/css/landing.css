@@ -1,0 +1,34 @@
+.photo-card{
+    border-radius: 5%;
+    background-size: cover;
+}
+
+.photo-card:hover{
+    transform: scale(1.01);
+    /* filter: brightness(2); */
+}
+
+.topic-card:hover{
+    transform: scale(1.01);
+}
+
+.topic-desc{
+    width: 93%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity .25s;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.topic-desc > *{
+    transform: translateY(20px);
+    transition: transform .25s;
+}
+
+.topic-desc:hover{
+    opacity: 1;
+}

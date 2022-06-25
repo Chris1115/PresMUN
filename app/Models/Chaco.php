@@ -14,11 +14,12 @@ class Chaco extends Model
 
     protected $guarded = ['id'];
 
-    public static function add($name, $slogan, $description){
+    public static function add($name, $image, $topic, $description){
         Chaco::create([
-            "name" => $name,
-            "slogan" => $slogan,
-            "description" => $description
+            "c_name" => $name,
+            "c_image" => $image,
+            "c_topic" => $topic,
+            "c_description" => $description
         ]);
     }
     public static function getAll(){
@@ -31,11 +32,12 @@ class Chaco extends Model
         return $chaco;
     }
 
-    public static function updateData($id, $name, $slogan, $description){
+    public static function updateData($id, $name, $image, $topic, $description){
         DB::table('chacos')->where('id', $id)->update([
-            "name" => $name,
-            "slogan" => $slogan,
-            "description" => $description
+            "c_name" => $name,
+            "c_image" => $image,
+            "c_topic" => $topic,
+            "c_description" => $description
         ]);
     }
 

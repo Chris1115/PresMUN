@@ -15,10 +15,10 @@ class Article extends Model
 
     public static function add($image, $title, $headline, $description){
         Article::create([
-            "image" => $image,
-            "title" => $title,
-            "headline" => $headline,
-            "description" => $description
+            "a_image" => $image,
+            "a_title" => $title,
+            "a_headline" => $headline,
+            "a_description" => $description
         ]);
     }
     public static function getAll(){
@@ -33,10 +33,10 @@ class Article extends Model
 
     public static function updateData($id, $image, $title, $headline, $description){
         DB::table('articles')->where('id', $id)->update([
-            'image' => $image, 
-            'title' => $title, 
-            'headline' => $headline, 
-            'description' => $description
+            'a_image' => $image, 
+            'a_title' => $title, 
+            'a_headline' => $headline, 
+            'a_description' => $description
         ]);
     }
 

@@ -1,0 +1,10 @@
+.gossip-card:hover{
+    border: 10px solid white;
+    border-radius: 5%;
+}
+
+.gossip-card{
+    transition: ease-in-out .25s;
+    box-sizing: border-box;
+    min-height: 350px;
+}

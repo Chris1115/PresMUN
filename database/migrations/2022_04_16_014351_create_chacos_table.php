@@ -15,9 +15,10 @@ class CreateChacosTable extends Migration
     {
         Schema::create('chacos', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('slogan');
-            $table->string('description');
+            $table->string('c_name');
+            $table->string('c_image')->nullable();
+            $table->string('c_topic', 10000);
+            $table->longText('c_description', 20000);
             $table->timestamps();
         });
     }

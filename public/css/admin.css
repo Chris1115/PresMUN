@@ -1,0 +1,32 @@
+/* Color Palette */
+/* 
+#000000 rgb(0, 0, 0)
+#00586A rgb(0, 88, 106)
+#92D593 rgb(146, 213, 147)
+#EDFE82 rgb(237, 254, 130)
+#f5f8d4 rgb(245, 248, 212)
+#FFFFFF rgb(255,255,255)
+ */
+html{
+    scroll-behavior: smooth;
+}
+
+.text-hover:hover{
+    opacity: .7;
+}
+
+.bg-pallete-1{
+    background-color: rgb(0, 88, 106);
+}
+
+.bg-pallete-2{
+    background-color: rgb(146, 213, 147);
+}
+
+.bg-pallete-3{
+    background-color: rgb(237, 254, 130);
+}
+
+.bg-pallete-4{
+    background-color: rgb(245, 248, 212);
+}

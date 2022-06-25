@@ -1,0 +1,19 @@
+.logo-text{
+    max-width: 250px;
+}
+
+#hover-menu{
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    backdrop-filter: blur(4.1px);
+    -webkit-backdrop-filter: blur(4.1px);
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: opacity .25s;
+}
+
+#chacos-view{
+    cursor: default;
+}

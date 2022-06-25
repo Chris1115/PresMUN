@@ -16,9 +16,8 @@ class CreateSubdivisionsTable extends Migration
         Schema::create('subdivisions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('divisions_id');
-            $table->string('name');
-            $table->string('slogan');
-            $table->string('description');
+            $table->string('sd_name');
+            $table->longText('sd_description', 20000);
             $table->timestamps();
         });
     }
