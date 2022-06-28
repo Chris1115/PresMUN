@@ -3,7 +3,7 @@
 @section('style')
 {{-- Hubungkan ke bila ada custom script css untuk page ini, sesuai dengan template berikut --}}
 {{-- <link href="{{ asset('css/{nama_file}') }}" rel="stylesheet"> --}}
-<link href="{{ asset('css/landing.css') }}" rel="stylesheet">
+<link href="{{ asset('public/css/landing.css') }}" rel="stylesheet">
 @endsection
 
 @section('header')
@@ -18,7 +18,7 @@
     <div class="container py-5">
         <div class="row p-5">
             <div class="col-5">
-                <img src="{{ asset('image/gallery/PRESMUN 2012_210812_0.jpg') }}" alt="" class="photo-card" width="100%">
+                <img src="{{ asset('public/image/gallery/PRESMUN 2012_210812_0.jpg') }}" alt="" class="photo-card" width="100%">
             </div>
             <div class="col-7">
                 <h1 class="display-1">Since 2012</h1><br>
@@ -31,7 +31,7 @@
                 <h1 class="fs-4 text-justify">PresMUN has achieved a certain reputation at the national level and is often deemed one of the most prestigious MUN conferences in Indonesia despite its young age. This year, PresMUN 2o21 aims to be a vessel upon which a group of young thinkers could pour their ideas and learn how to shape this world into a better place.</h1>
             </div>
             <div class="col-7">
-                <img src="{{ asset('image/gallery/PRESMUN 2012_210812_1.jpg') }}" alt="" class="photo-card" width="100%">
+                <img src="{{ asset('public/image/gallery/PRESMUN 2012_210812_1.jpg') }}" alt="" class="photo-card" width="100%">
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
         <div class="row py-5">
             <div class="col-12 d-flex flex-column justify-content-center align-items-center">
                 <h1 class="display-1 text-center">VISION</h1><br>
-                <img src="{{ asset('icons/mortarboard.svg') }}" alt="" width="15%" class="mb-5">
+                <img src="{{ asset('public/icons/mortarboard.svg') }}" alt="" width="15%" class="mb-5">
                 <h1 class="fs-4 text-center">To bring forward greater awareness of potential future leaders for crucial international issues and how such issues are handled.</h1>
             </div>
         </div>
@@ -52,15 +52,15 @@
         </div>
         <div class="row pb-5">
             <div class="col-4 pb-5 d-flex flex-column justify-content-center align-items-center">
-                <img src="{{ asset('icons/globe.svg') }}" alt="" width="50%" class="mb-5">
+                <img src="{{ asset('public/icons/globe.svg') }}" alt="" width="50%" class="mb-5">
                 <h1 class="fs-5 text-center">Creating an atmosphere that is substantially supportive of the learning process for all participating delegates.</h1>
             </div>
             <div class="col-4 pb-5 d-flex flex-column justify-content-center align-items-center">
-                <img src="{{ asset('icons/hand-thumbs-up.svg') }}" alt="" width="50%" class="mb-5">
+                <img src="{{ asset('public/icons/hand-thumbs-up.svg') }}" alt="" width="50%" class="mb-5">
                 <h1 class="fs-5 text-center">Providing the best service possible to the participating delegates through professional manner and amiable presence that President Model United Nations (PresMUN) has always been attributed to.</h1>
             </div>
             <div class="col-4 pb-5 d-flex flex-column justify-content-center align-items-center">
-                <img src="{{ asset('icons/people.svg') }}" alt="" width="50%" class="mb-5">
+                <img src="{{ asset('public/icons/people.svg') }}" alt="" width="50%" class="mb-5">
                 <h1 class="fs-5 text-center">Building strong partnerships with several external parties which shall unsure mutual benefit upon continuous, long-lasting fashion. </h1>
             </div>
         </div>
@@ -75,25 +75,25 @@
         </div>
         <div class="row pb-5">
             <div class="col-3 topic-card position-relative">
-                <img src="{{ asset("image/category/society.jpg") }}" width="100%" height="100%">
+                <img src="{{ asset("public/image/category/society.jpg") }}" width="100%" height="100%">
                 <div class="topic-desc position-absolute top-0 bottom-0">
                     <h1 class="fs-2 text-center blockquote">SOCIETY</h1>
                 </div>
             </div>
             <div class="col-3 topic-card position-relative">
-                <img src="{{ asset("image/category/culture.jpg") }}" width="100%" height="100%">
+                <img src="{{ asset("public/image/category/culture.jpg") }}" width="100%" height="100%">
                 <div class="topic-desc position-absolute top-0 bottom-0">
                     <h1 class="fs-2 text-center blockquote">CULTURE</h1>
                 </div>
             </div>
             <div class="col-3 topic-card position-relative">
-                <img src="{{ asset("image/category/earth.jpg") }}" width="100%" height="100%">
+                <img src="{{ asset("public/image/category/earth.jpg") }}" width="100%" height="100%">
                 <div class="topic-desc position-absolute top-0 bottom-0">
                     <h1 class="fs-2 text-center blockquote">EARTH</h1>
                 </div>
             </div>
             <div class="col-3 topic-card position-relative">
-                <img src="{{ asset("image/category/food.jpg") }}" width="100%" height="100%">
+                <img src="{{ asset("public/image/category/food.jpg") }}" width="100%" height="100%">
                 <div class="topic-desc position-absolute top-0 bottom-0">
                     <h1 class="fs-2 text-center blockquote">FOOD</h1>
                 </div>
@@ -106,5 +106,5 @@
 @section('script')
 {{-- Hubungkan ke bila ada custom script js untuk page ini, sesuai dengan template berikut --}}
 {{-- <script src="{{ asset('js/{nama_file}') }}"></script> --}}
-<script src="{{ asset('js/landing.js') }}"></script>
+<script src="{{ asset('public/js/landing.js') }}"></script>
 @endsection

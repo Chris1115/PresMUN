@@ -3,7 +3,7 @@
 @section('style')
 {{-- Hubungkan ke bila ada custom script css untuk page ini, sesuai dengan template berikut --}}
 {{-- <link href="{{ asset('css/{nama_file}') }}" rel="stylesheet"> --}}
-<link href="{{ asset('css/gossip.css') }}" rel="stylesheet">
+<link href="{{ asset('public/css/gossip.css') }}" rel="stylesheet">
 @endsection
 
 @section('header')

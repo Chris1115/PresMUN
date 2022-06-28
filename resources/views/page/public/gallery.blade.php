@@ -3,7 +3,7 @@
 @section('style')
 {{-- Hubungkan ke bila ada custom script css untuk page ini, sesuai dengan template berikut --}}
 {{-- <link href="{{ asset('css/{nama_file}') }}" rel="stylesheet"> --}}
-<link href="{{ asset('css/gallery.css') }}" rel="stylesheet">
+<link href="{{ asset('public/css/gallery.css') }}" rel="stylesheet">
 @endsection
 
 @section('header')
@@ -20,7 +20,7 @@
         <div class="row py-5">
             @foreach ($galleries as $gallery)
             <div class="col-4 photo-card position-relative py-3 text-white">
-                <img src="{{ asset('storage/'. $gallery->ga_image) }}" alt="" class="photo-card col-4 my-3">
+                <img src="{{ asset('presidentinternationalmun.org/public/storage/'. $gallery->ga_image) }}" alt="" class="photo-card col-4 my-3">
                 <div class="photo-desc position-absolute bottom-0 left-50">
                     <h1 class="fs-2 text-center blockquote">{{ $gallery->ga_title }}</h1>
                 </div>

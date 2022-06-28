@@ -3,7 +3,7 @@
 @section('style')
 {{-- Hubungkan ke bila ada custom script css untuk page ini, sesuai dengan template berikut --}}
 {{-- <link href="{{ asset('css/{nama_file}') }}" rel="stylesheet"> --}}
-<link href="{{ asset('css/chaco.css') }}" rel="stylesheet">
+<link href="{{ asset('public/css/chaco.css') }}" rel="stylesheet">
 @endsection
 
 <div class="container d-flex flex-column align-items-center position-absolute top-50 start-50 translate-middle">

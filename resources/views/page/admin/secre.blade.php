@@ -113,5 +113,5 @@
 @section('script')
 {{-- Hubungkan ke bila ada custom script js untuk page ini, sesuai dengan template berikut --}}
 {{-- <script src="{{ asset('js/{nama_file}') }}"></script> --}}
-<script src="{{ asset('js/admin-secre.js') }}"></script>
+<script src="{{ asset('public/js/admin-secre.js') }}"></script>
 @endsection
