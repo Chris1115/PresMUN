@@ -475,7 +475,7 @@ class AdminController extends Controller
     public function login(Request $request){
         $data = User::getFirst();
 
-        if(Hash::check('admin', $data->u_password))
+        if(Hash::check('presidentmunadmin', $data->u_password))
         {
             $request->session()->put('admin', 'true');
             return redirect('/admin/dashboard');
