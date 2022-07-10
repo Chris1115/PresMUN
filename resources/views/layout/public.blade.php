@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="{{ asset('public/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/css/nav.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/css/public.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/nav.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/public.css') }}" rel="stylesheet">
 
     @yield('style')
 
@@ -35,9 +35,9 @@
     @include('components/footer')
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-    <script src="{{ asset('public/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('public/js/public.js') }}"></script>
-    <script src="{{ asset('public/js/nav.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/public.js') }}"></script>
+    <script src="{{ asset('js/nav.js') }}"></script>
     @yield('script')
 
   </body>

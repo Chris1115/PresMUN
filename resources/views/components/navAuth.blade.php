@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container">
         <a class="navbar-brand" href="/">
-            <img src="{{ asset("public/image/logo.png") }}" alt="LOGO" width="120" height="120">
+            <img src="{{ asset("image/logo.png") }}" alt="LOGO" width="120" height="120">
         </a>
         <a href="/" class="logo-text text-white text-decoration-none text-hover">
             PRESIDENT INTERNATIONAL MODEL UNITED NATIONS 2022

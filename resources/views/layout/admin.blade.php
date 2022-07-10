@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="{{ asset('public/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/css/navAuth.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/css/admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/navAuth.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 
     @yield('style')
 
